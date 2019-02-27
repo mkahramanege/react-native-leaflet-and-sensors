@@ -5,8 +5,12 @@ import * as AScreen from './src/screens/accelerometer/Screen';
 import * as BScreen from './src/screens/barometer/Screen';
 import * as GScreen from './src/screens/gyroscope/Screen';
 import * as MScreen from './src/screens/magnetometer/Screen';
+import * as LScreen from './src/screens/location/Screen';
 
 const Drawer = createDrawerNavigator({
+    Location: {
+      screen: LScreen.default
+    },
     Accelerometer: {
       screen: AScreen.default
     },
