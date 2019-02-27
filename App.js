@@ -7,7 +7,7 @@ import * as GScreen from './src/screens/gyroscope/Screen';
 import * as MScreen from './src/screens/magnetometer/Screen';
 
 const Drawer = createDrawerNavigator({
-    Acceloremeter: {
+    Accelerometer: {
       screen: AScreen.default
     },
     Barometer: {
