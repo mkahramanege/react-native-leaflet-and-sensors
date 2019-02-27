@@ -17,23 +17,8 @@ export default class Screen extends React.Component {
         //Sensör için değişiklik algılama süresi ms cinsinden belirledik.
         setUpdateIntervalForType(SensorTypes.accelerometer, 400);
 
-        this.subscription = accelerometer.subscribe(({ x, y, z, timestamp }) => {
-                if (this.state.started) {
-                    const xfark = x - this.state.x;
-                    const yfark = y - this.state.y;
-
-                    const zfark = Math.sqrt((xfark * xfark) + (yfark * yfark));
-
-                    console.log(zfark);
-                }
-
-                this.setState({
-                   x,
-                   y,
-                   z,
-                   timestamp,
-                   started: true 
-                });
+        this.subscription = accelerometer.subscribe((data) => {
+                console.log(data);
             }
         );
     }
