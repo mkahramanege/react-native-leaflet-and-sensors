@@ -18,3 +18,5 @@ const ReduxApp = () => (
 );
 
 AppRegistry.registerComponent(appName, () => ReduxApp);
+
+//Deneme 2
