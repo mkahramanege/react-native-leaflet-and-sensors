@@ -37,6 +37,14 @@ const mapLayers = [
     attribution:
       '&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors'
   },
+  {
+    name: 'google',
+    type: 'TileLayer',
+    baseLayer: true,
+    url: `https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}`,
+    attribution:
+      '&amp;copy <a href=&quot;http://osm.org/copyright&quot;>Google</a>'
+  },
  /* {
      name: 'image',
      type: 'ImageOverlay',
