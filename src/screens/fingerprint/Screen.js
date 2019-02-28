@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Alert } from 'react-native';
-import FingerprintScanner from 'react-native-fingerprint-scanner';
+import { View } from 'react-native';
+//import FingerprintScanner from 'react-native-fingerprint-scanner';
 
 //Fingerprint
 export default class Screen extends React.Component {
@@ -8,7 +8,7 @@ export default class Screen extends React.Component {
     state = {}
 
     componentWillMount() {      
-        FingerprintScanner
+        /*FingerprintScanner
         .authenticate({ onAttempt: this.handleAuthenticationAttempted })
         .then(() => {
             this.props.handlePopupDismissed();
@@ -17,16 +17,16 @@ export default class Screen extends React.Component {
         .catch((error) => {
             console.log('Hata 1');
             console.log(error);
-        });  
+        });*/  
     }
 
     componentWillUnmount() {
-        FingerprintScanner.release();
+        /*FingerprintScanner.release();*/
     }
 
-    handleAuthenticationAttempted = (error) => {
-        console.log('Hata 2');
-        console.log(error);
+    handleAuthenticationAttempted = () => {
+        /*console.log('Hata 2');
+        console.log(error);*/
       };
 
     render() {

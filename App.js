@@ -1,6 +1,5 @@
 import React from 'react';
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
-import WebViewLeaflet from "react-native-webview-leaflet";
 
 import * as AScreen from './src/screens/accelerometer/Screen';
 import * as BScreen from './src/screens/barometer/Screen';
@@ -14,9 +13,9 @@ const Drawer = createDrawerNavigator({
     Leaflet: {
       screen: LLScreen.default
     },
-    Fingerprint: {
+    /*Fingerprint: {
       screen: FScreen.default
-    },
+    },*/
     Location: {
       screen: LScreen.default
     },
