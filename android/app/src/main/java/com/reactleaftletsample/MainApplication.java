@@ -32,7 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
             //new ReactNativeFingerprintScannerPackage(),
             new RNSensorsPackage(),
             new VectorIconsPackage(),
-            new RNGestureHandlerPackage()
+            new RNGestureHandlerPackage(),
+            new ToastReactPackage()
       );
     }
 

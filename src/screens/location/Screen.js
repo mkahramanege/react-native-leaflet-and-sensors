@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {View, Text,  StyleSheet, Image ,PermissionsAndroid,Platform} from 'react-native';
+import { ToastModule } from '../../modules/module';
 
 export default class Screen extends React.Component {
 
@@ -69,6 +70,11 @@ export default class Screen extends React.Component {
 
  componentWillUnmount = () => {
     navigator.geolocation.clearWatch(this.watchID);
+
+ }
+
+ componentWillMount(){
+  ToastModule.ToastGoster("Bilgileriniz kaydedildi.",ToastModule.LONG);
  }
 
  render() {

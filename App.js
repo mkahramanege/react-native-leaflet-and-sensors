@@ -7,12 +7,12 @@ import * as GScreen from './src/screens/gyroscope/Screen';
 import * as MScreen from './src/screens/magnetometer/Screen';
 import * as LScreen from './src/screens/location/Screen';
 //import * as FScreen from './src/screens/fingerprint/Screen';
-import * as LLScreen from './src/screens/leaflet/Screen';
+//import * as LLScreen from './src/screens/leaflet/Screen';
 
 const Drawer = createDrawerNavigator({
-    Leaflet: {
+    /*Leaflet: {
       screen: LLScreen.default
-    },
+    },*/
     /*Fingerprint: {
       screen: FScreen.default
     },*/
