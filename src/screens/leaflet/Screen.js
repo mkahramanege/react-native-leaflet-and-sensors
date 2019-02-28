@@ -91,16 +91,6 @@ export default class Screen extends React.Component {
 
     render() {
         return (<View style={styles.container}>
-          <View style={styles.statusBar} />
-          <Text
-            style={{
-              margin: 10,
-              fontSize: 18,
-              color: 'black'
-            }}
-          >
-            react-native-webview-leaflet Demo
-          </Text>
           <WebViewLeaflet
             ref={(component) => (this.webViewLeaflet = component)}
             onLoad={this.onLoad}
@@ -144,7 +134,7 @@ export default class Screen extends React.Component {
               onPress={() => this.centerMap('bg')}
               borderWidth={0}
               fontSize={30}
-              title={'🍺'}
+              title={'👍'}
             />
             <Button
               onPress={() => this.centerMap('kd')}
