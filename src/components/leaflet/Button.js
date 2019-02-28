@@ -1,12 +1,11 @@
 import { View, TouchableHighlight, Text } from 'react-native';
-import React, { Component } from 'react';
+import React from 'react';
 
-export default (Button = (props) => {
-  return (
+const Button = (props) => (
     <TouchableHighlight
       onPress={props.onPress}
       style={{
-        backgroundColor: props.color ||'lightblue',
+        backgroundColor: props.color || 'lightblue',
         borderRadius: 4,
         borderColor: props.borderColor || 'rgb(200,200,200)',
         borderWidth: props.borderWidth || 1,
@@ -44,4 +43,5 @@ export default (Button = (props) => {
       </View>
     </TouchableHighlight>
   );
-});
+
+export default Button;

@@ -60,6 +60,13 @@
 		C3B2AB4314894F12ADD5753D /* libRNSensors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD1BA76C4C483796CD00E5 /* libRNSensors.a */; };
 		099EB14FBD274D708D5AC32B /* libReactNativeFingerprintScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2784B16110F1497F81BA3FC8 /* libReactNativeFingerprintScanner.a */; };
 		16A8B746A09F49478F683601 /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B2EA4589DE470E9E8A4C60 /* libRNCWebView.a */; };
+		88902DF804224E0B83C4D7FC /* layers-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA740E7BD8041C0899E6EC4 /* layers-2x.png */; };
+		5F3CDB344A17413DA9D91879 /* layers.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6DEE07E38C448FBFE97DEA /* layers.png */; };
+		C50D453ED3524EC1BA30F707 /* marker-icon-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066B20314D30421894F72ED0 /* marker-icon-2x.png */; };
+		7248F162AFD948BEA5891F00 /* marker-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6525C668F1394650B2A6BB89 /* marker-icon.png */; };
+		651B9F2F548543A9AF7E783C /* marker-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = A646A3669CA9454193053A02 /* marker-shadow.png */; };
+		DDBBCE7FD0B74B2292D09BBC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4F5785B2B194EE4A3D57826 /* icon.png */; };
+		F2ABB432A1E144ECB1887408 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED753EBF6D64A41B589373E /* splash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +400,13 @@
 		2784B16110F1497F81BA3FC8 /* libReactNativeFingerprintScanner.a */ = {isa = PBXFileReference; name = "libReactNativeFingerprintScanner.a"; path = "libReactNativeFingerprintScanner.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		B7D25A863CFD445B8A2B2453 /* RNCWebView.xcodeproj */ = {isa = PBXFileReference; name = "RNCWebView.xcodeproj"; path = "../node_modules/react-native-webview/ios/RNCWebView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		74B2EA4589DE470E9E8A4C60 /* libRNCWebView.a */ = {isa = PBXFileReference; name = "libRNCWebView.a"; path = "libRNCWebView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FAA740E7BD8041C0899E6EC4 /* layers-2x.png */ = {isa = PBXFileReference; name = "layers-2x.png"; path = "../src/assets/leaflet/images/layers-2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CE6DEE07E38C448FBFE97DEA /* layers.png */ = {isa = PBXFileReference; name = "layers.png"; path = "../src/assets/leaflet/images/layers.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		066B20314D30421894F72ED0 /* marker-icon-2x.png */ = {isa = PBXFileReference; name = "marker-icon-2x.png"; path = "../src/assets/leaflet/images/marker-icon-2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6525C668F1394650B2A6BB89 /* marker-icon.png */ = {isa = PBXFileReference; name = "marker-icon.png"; path = "../src/assets/leaflet/images/marker-icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A646A3669CA9454193053A02 /* marker-shadow.png */ = {isa = PBXFileReference; name = "marker-shadow.png"; path = "../src/assets/leaflet/images/marker-shadow.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E4F5785B2B194EE4A3D57826 /* icon.png */ = {isa = PBXFileReference; name = "icon.png"; path = "../src/assets/icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1ED753EBF6D64A41B589373E /* splash.png */ = {isa = PBXFileReference; name = "splash.png"; path = "../src/assets/splash.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -687,6 +701,13 @@
 				C929EF8C84CE4FC2908F15A1 /* Octicons.ttf */,
 				60F0A1EF80464554B0F1A4EE /* SimpleLineIcons.ttf */,
 				57E80047CFEF479F9000841D /* Zocial.ttf */,
+				FAA740E7BD8041C0899E6EC4 /* layers-2x.png */,
+				CE6DEE07E38C448FBFE97DEA /* layers.png */,
+				066B20314D30421894F72ED0 /* marker-icon-2x.png */,
+				6525C668F1394650B2A6BB89 /* marker-icon.png */,
+				A646A3669CA9454193053A02 /* marker-shadow.png */,
+				E4F5785B2B194EE4A3D57826 /* icon.png */,
+				1ED753EBF6D64A41B589373E /* splash.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1153,6 +1174,13 @@
 				7A680D17EE6840FE888F1F58 /* Octicons.ttf in Resources */,
 				8405E033F19B43DEB0E59683 /* SimpleLineIcons.ttf in Resources */,
 				96A23C638E8F48848EDC490A /* Zocial.ttf in Resources */,
+				88902DF804224E0B83C4D7FC /* layers-2x.png in Resources */,
+				5F3CDB344A17413DA9D91879 /* layers.png in Resources */,
+				C50D453ED3524EC1BA30F707 /* marker-icon-2x.png in Resources */,
+				7248F162AFD948BEA5891F00 /* marker-icon.png in Resources */,
+				651B9F2F548543A9AF7E783C /* marker-shadow.png in Resources */,
+				DDBBCE7FD0B74B2292D09BBC /* icon.png in Resources */,
+				F2ABB432A1E144ECB1887408 /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

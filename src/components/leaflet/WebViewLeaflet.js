@@ -3,13 +3,12 @@ import {
   View,
   StyleSheet,
   ActivityIndicator,
-  WebView,
   Platform,
   Text
 } from 'react-native';
+import { WebView } from 'react-native-webview';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { Asset } from 'expo';
 
 const util = require('util');
 const isValidCoordinates = require('is-valid-coordinates');
@@ -19,8 +18,8 @@ const uniqby = require('lodash.uniqby');
 // https://github.com/facebook/react-native/issues/8996
 // https://github.com/facebook/react-native/issues/16133
 
-const INDEX_FILE_PATH = `./assets/dist/index.html`;
-const INDEX_FILE_ASSET_URI = Asset.fromModule(require(INDEX_FILE_PATH)).uri;
+//const INDEX_FILE_PATH = `./assets/dist/index.html`;
+//const INDEX_FILE_ASSET_URI = Asset.fromModule(require(INDEX_FILE_PATH)).uri;
 
 // const INDEX_FILE = require(INDEX_FILE_PATH);
 const MESSAGE_PREFIX = 'react-native-webview-leaflet';
@@ -53,7 +52,7 @@ export default class WebViewLeaflet extends React.Component {
     // if so, send a message to the map to update its current position
     if (
       this.props.centerPosition &&
-      this.props.centerPosition.length == 2 &&
+      this.props.centerPosition.length === 2 &&
       prevProps.centerPosition !== this.props.centerPosition
     ) {
       if (
@@ -82,7 +81,6 @@ export default class WebViewLeaflet extends React.Component {
       this.props.ownPositionMarker.coords.length === 2 &&
       JSON.stringify(prevProps.ownPositionMarker) !== JSON.stringify(this.props.ownPositionMarker)
     ) {
-      
       if (
         isValidCoordinates(
           this.props.ownPositionMarker.coords[1],
@@ -106,9 +104,10 @@ export default class WebViewLeaflet extends React.Component {
     // handle updates to map markers array
     if (this.props.markers && prevProps.markers !== this.props.markers) {
       // debugger;
-      let validLocations = this.props.markers.filter((marker) => {
-        if (!marker || !marker.coords || marker.coords.length !== 2)
+      const validLocations = this.props.markers.filter((marker) => {
+        if (!marker || !marker.coords || marker.coords.length !== 2) {
           return false;
+        }
         return isValidCoordinates(marker.coords[1], marker.coords[0]);
       });
       this.sendMessage({ locations: validLocations });
@@ -118,8 +117,8 @@ export default class WebViewLeaflet extends React.Component {
       this.setState({ locations: validLocations });
     }
 
-    if ((this.props.useMarkerClustering)&&
-    (this.props.useMarkerClustering!== prevProps.useMarkerClustering)) {
+    if ((this.props.useMarkerClustering) &&
+    (this.props.useMarkerClustering !== prevProps.useMarkerClustering)) {
       this.sendMessage({ useMarkerClustering: this.props.useMarkerClustering });
     }
 
@@ -329,8 +328,7 @@ export default class WebViewLeaflet extends React.Component {
     );
   };
 
-  maybeRenderMap = () => {
-    return (
+  maybeRenderMap = () => (
       <WebView
         style={{
           ...StyleSheet.absoluteFillObject
@@ -338,13 +336,12 @@ export default class WebViewLeaflet extends React.Component {
         ref={(ref) => {
           this.webview = ref;
         }}
-        /* source={INDEX_FILE} */
         source={
           Platform.OS === 'ios'
-            ? require('./assets/dist/index.html')
-            : { uri: INDEX_FILE_ASSET_URI }
+            ? require('./../../assets/leaflet/index.html')
+            : { uri: 'file:///android_asset/index.html' }
         }
-        startInLoadingState={true}
+        startInLoadingState
         renderLoading={this.renderLoading}
         renderError={(error) => {
           console.log(
@@ -355,7 +352,7 @@ export default class WebViewLeaflet extends React.Component {
             })
           );
         }}
-        javaScriptEnabled={true}
+        javaScriptEnabled
         onError={(error) => {
           console.log(
             'ERROR: ',
@@ -382,10 +379,9 @@ export default class WebViewLeaflet extends React.Component {
           // is loaded.
           this.setState({ mapLoaded: true });
         }}
-        domStorageEnabled={true}
+        domStorageEnabled
       />
     );
-  };
 
   maybeRenderWebviewError = () => {
     if (this.state.webviewErrorMessages.length > 0) {

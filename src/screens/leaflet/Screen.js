@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import WebViewLeaflet from 'react-native-webview-leaflet';
+import WebViewLeaflet from '../../components/leaflet/WebViewLeaflet';
 
 //Fingerprint
 export default class Screen extends React.Component {
